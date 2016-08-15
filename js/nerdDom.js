@@ -19,9 +19,21 @@ $(document).ready(function() {
       results += "<li>" + faveNiche[i] + "</li>";
     }
     results += "</ol>";
-    
+
     $(".nerd-input").html("");
     $(".nerd-input").append(results);
+
+    loggedNiche = faveNiche.slice(0,3);
+
+    results2 ="<ol class='list-group-item'>";
+
+    for (var i = 0; i < loggedNiche.length; i++) {
+      results2 += "<li>" + loggedNiche[i] + "</li>";
+    }
+    results2 += "</ol>";
+
+    $(".nerd-input2").html("");
+    $(".nerd-input2").append(results2);
 
   });
 }); // end ready
